@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">AlejandriApp</string>
+    <string name="username">usuario</string>
+    <string name="password">contraseña</string>
+    <string name="comoFunciona">¿Como funciona?</string>
+    <string name="ingresar">INGRESAR</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="scan">Scanear</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="message_hint">Buscar</string>
+    <string name="book_title">LIBROS</string>
+    <string name="history_title">HISTORIAL</string>
+    <string name="perfil_title">INFORMACIÓN PERSONAL</string>
+    <string name="perfil_name">Nombres </string>
+    <string name="perfil_lastname">Apellidos</string>
+    <string name="perfil_codigo">Código de alumno</string>
+    <string name="perfil_facultad">Facultad</string>
+    <string name="perfil_eap">Escuela</string>
+    <string name="perfil_ciclo">Ciclo</string>
+    <string name="perfil_mail">Correo electrónico</string>
+    <string name="perfil_genre">Femenino/Masculino</string>
+    <string name="perfil_dof">Fecha de nacimiento</string>
+    <string name="perfil_contacto">Contacto</string>
+
+    <string name="toast_logueado">Bienvenido a AlejandriApp</string>
+    <string name="authentication">usuario y contraseña incorrectos</string>
+    <string name="no_books">No hay libros para mostrar</string>
+    <string name="error">Hubo un error, por favor intente más tarde</string>
+    <string name="no_server">No hubo conexión al servidor, por favor intente más tarde</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_button_red"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <me.unmsm.alejandriapp.presentacion.widget.MediumText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="75dp"
+        android:text="@string/app_name"
+        android:textColor="@color/blanco"
+        android:textSize="35sp"
+        android:id="@+id/mediumText" />
+
+    <RelativeLayout
+        android:id="@+id/layout_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:windowSoftInputMode="adjustResize|stateHidden"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/blanco"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_below="@+id/mediumText"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+
+
+            <me.unmsm.alejandriapp.presentacion.widget.LigthEdit
+                android:id="@+id/text_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_edit_text"
+                android:drawableLeft="@mipmap/ic_user"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:hint="@string/username"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@."
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:singleLine="true" />
+
+            <me.unmsm.alejandriapp.presentacion.widget.LigthEdit
+                android:id="@+id/text_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_edit_text"
+                android:drawableLeft="@mipmap/ic_lock"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:hint="@string/password"
+                android:inputType="numberPassword"
+                android:padding="8dp"
+                android:singleLine="true" />
+
+
+
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:textColor="@color/white"/>
+
+
+            <me.unmsm.alejandriapp.presentacion.widget.MediumButton
+                android:id="@+id/button_signin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="22dp"
+                android:background="@drawable/selector_button_login"
+                android:text="@string/ingresar"
+                android:textAllCaps="false"
+                android:textColor="@color/blue_facebook"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
