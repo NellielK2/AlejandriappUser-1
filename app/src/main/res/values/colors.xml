@@ -57,8 +57,8 @@
     <color name="white_transparent">#47b1b1b1</color>
 
     <!--segunda opcion-->
-    <color name="color_start">#DAE2F8</color>
-    <color name="color_end">#D6A4A4</color>
+    <color name="color_start">#000046</color>
+    <color name="color_end">#000046</color>
 
 
 </resources>

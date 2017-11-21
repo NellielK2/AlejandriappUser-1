@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <me.unmsm.alejandriapp.presentacion.widget.SemiBoldText
+                android:id="@+id/title_detail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Título del libro/tesis/tesina"
@@ -30,6 +31,7 @@
             <me.unmsm.alejandriapp.presentacion.widget.LigthText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/isbn_detail"
                 android:text="ISBN" />
             <me.unmsm.alejandriapp.presentacion.widget.LigthText
                 android:layout_width="match_parent"
@@ -39,6 +41,7 @@
             <me.unmsm.alejandriapp.presentacion.widget.LigthText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/autor_detail"
                 android:text="Autor" />
         </LinearLayout>
     </LinearLayout>
@@ -46,12 +49,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="Editorial" />
+        android:text="Idioma" />
     <me.unmsm.alejandriapp.presentacion.widget.LigthText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="Editorial" />
+        android:id="@+id/idioma_detail"
+        android:text="Idioma" />
     <me.unmsm.alejandriapp.presentacion.widget.LigthText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,19 +64,42 @@
     <me.unmsm.alejandriapp.presentacion.widget.LigthText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/edicion_detail"
         android:layout_marginLeft="10dp"
         android:text="Edición" />
     <me.unmsm.alejandriapp.presentacion.widget.LigthText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="Sinopsis" />
+        android:text="Número de páginas" />
+    <me.unmsm.alejandriapp.presentacion.widget.LigthText
+        android:id="@+id/paginas_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="" />
     <me.unmsm.alejandriapp.presentacion.widget.LigthText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text=""
-        android:lines="7"/>
+        android:text="Año" />
+    <me.unmsm.alejandriapp.presentacion.widget.LigthText
+        android:id="@+id/año_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="" />
+    <me.unmsm.alejandriapp.presentacion.widget.LigthText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Fecha de ingreso" />
+    <me.unmsm.alejandriapp.presentacion.widget.LigthText
+        android:id="@+id/fechaI_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="" />
     <me.unmsm.alejandriapp.presentacion.widget.LigthText
         android:layout_width="match_parent"
         android:layout_marginLeft="10dp"
@@ -81,12 +108,14 @@
     <me.unmsm.alejandriapp.presentacion.widget.LigthText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/estado_detail"
         android:layout_marginLeft="10dp"
         android:text="Disponible/No disponible" />
     <me.unmsm.alejandriapp.presentacion.widget.MediumButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:id="@+id/button_prestamo"
         android:background="@drawable/custom_button_logout"
         android:text="Pedir préstamo"
         />

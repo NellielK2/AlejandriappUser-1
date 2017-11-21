@@ -3,6 +3,7 @@ package me.unmsm.alejandriapp.presentacion.contract;
 
 import me.unmsm.alejandriapp.core.BasePresenter;
 import me.unmsm.alejandriapp.core.BaseView;
+import me.unmsm.alejandriapp.data.entity.PersonEntity;
 import me.unmsm.alejandriapp.data.entity.loginData;
 
 public interface LoginContract {
@@ -14,7 +15,5 @@ public interface LoginContract {
 
     interface Presenter extends BasePresenter {
         void loginUser(String username, String password);
-        void getPerfilUser();
-        void openSessionUser(String token, loginData userEntity);
     }
 }

@@ -20,9 +20,6 @@ import me.unmsm.alejandriapp.R;
 import me.unmsm.alejandriapp.core.BaseActivity;
 import me.unmsm.alejandriapp.presentacion.adapter.PagerAdapter;
 
-/**
- * Created by KERLY on 25/102017.
- */
 
 public class MainActivity extends BaseActivity {
 

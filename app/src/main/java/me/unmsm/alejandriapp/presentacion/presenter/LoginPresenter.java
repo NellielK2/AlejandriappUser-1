@@ -7,9 +7,11 @@ import android.util.Log;
 import java.util.ArrayList;
 
 import me.unmsm.alejandriapp.data.entity.loginData;
-import me.unmsm.alejandriapp.data.repositories.remote.Request.UserRequest;
-import me.unmsm.alejandriapp.data.repositories.remote.ServiceGenerator;
+import me.unmsm.alejandriapp.data.remote.Request.UserRequest;
+import me.unmsm.alejandriapp.data.remote.ServiceGenerator;
+import me.unmsm.alejandriapp.presentacion.constant.Constants;
 import me.unmsm.alejandriapp.presentacion.contract.LoginContract;
+import me.unmsm.alejandriapp.presentacion.util.Preferences;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -40,13 +42,12 @@ public class LoginPresenter implements LoginContract.Presenter {
                     loginOpen = response.body();
                     Log.i("Estado", "entro por aca");
                     Log.i(username, String.valueOf(password));
-                    for (int i = 0; i < loginOpen.size(); i++) {
-                        if (username.equals(loginOpen.get(i).getEmail()) && contrasenha.equals(loginOpen.get(i).codUsuario)) {
-                            Log.i(loginOpen.get(i).getEmail(), String.valueOf(loginOpen.get(i).getCodUsuario()));
-                            mLoginView.successLoginUser();
-                            mLoginView.setDialogMessage("Bienvenido");
+                    if (!loginOpen.isEmpty()) {
+                        Log.i("Usuario",String.valueOf(loginOpen.get(0).getUsuarioId()));
+                        Preferences.Guardar(Constants.idUser,String.valueOf(loginOpen.get(0).getUsuarioId()),context);
+                        mLoginView.successLoginUser();
+                        mLoginView.setDialogMessage("Bienvenido");
 
-                        }
                     }
 
                 }
@@ -62,15 +63,7 @@ public class LoginPresenter implements LoginContract.Presenter {
         });
     }
 
-    @Override
-    public void getPerfilUser() {
 
-    }
-
-    @Override
-    public void openSessionUser(String token, loginData userEntity) {
-
-    }
 
     @Override
     public void start() {

@@ -33,12 +33,12 @@ dependencies {
     compile "com.jakewharton:butterknife:$rootProject.ext.butterknife"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknife"
     compile "uk.co.chrisjenx:calligraphy:$rootProject.ext.calligraphy"
-    compile 'de.hdodenhof:circleimageview:2.2.0'
     compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit2"
     compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit2"
     compile "com.mobsandgeeks:android-saripaar:$rootProject.ext.androidsaripaar"
     compile "com.google.zxing:core:$rootProject.ext.google"
     compile "com.journeyapps:zxing-android-embedded:$rootProject.ext.codeQr"
+    compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:support-v4:25.3.1'
     testCompile 'junit:junit:4.12'

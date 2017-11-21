@@ -9,10 +9,6 @@ import me.unmsm.alejandriapp.presentacion.Fragments.HistoryFragment;
 import me.unmsm.alejandriapp.presentacion.Fragments.ProfileFragment;
 
 
-/**
- * Created by KERLY on 15/10/2017.
- */
-
 public class PagerAdapter extends FragmentPagerAdapter {
     private int numberOfTabs;
 
@@ -26,14 +22,11 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                BooksFragment booksFragment =new BooksFragment();
-                return booksFragment;
+                return new BooksFragment();
             case 1:
-                HistoryFragment historyFragment =new HistoryFragment();
-                return historyFragment;
+               return new HistoryFragment();
             case 2:
-                ProfileFragment profileFragment = new ProfileFragment();
-                return profileFragment;
+                return  new ProfileFragment();
             default:
                 return null;
         }

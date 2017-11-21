@@ -1,70 +1,64 @@
 package me.unmsm.alejandriapp.presentacion.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import me.unmsm.alejandriapp.R;
 import me.unmsm.alejandriapp.data.entity.BooksEntity;
 
-/**
- * Created by KERLY on 24/10/2017.
- */
 
-public class BookAdapter extends RecyclerView.Adapter <BookAdapter.ViewHolderBook> {
-    List<BooksEntity> booksEntityList = new ArrayList<>() ;
-    Context context;
-    public BookAdapter(Context context) {
-        this.context = context;
-    }
-    @Override
-    public ViewHolderBook onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_books,parent,false);
-        ViewHolderBook viewHolderBook= new ViewHolderBook(view);
-        return viewHolderBook;
-    }
-    public void setList( List<BooksEntity> booksEntityList) {
-        this.booksEntityList = booksEntityList;
+public class BookAdapter extends BaseAdapter {
+
+    private FragmentActivity activity;
+    private LayoutInflater inflater;
+    private ArrayList<BooksEntity> booksEntities;
+
+    public BookAdapter(FragmentActivity activity, ArrayList<BooksEntity> booksEntities) {
+        this.activity = activity;
+        this.booksEntities = booksEntities;
+        inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolderBook holder, int position) {
-        BooksEntity booksEntity = booksEntityList.get(position);
-        holder.text_title.setText(booksEntityList.get(position).getTitulo());
-        holder.text_isbn.setText(booksEntityList.get(position).getIsbn());
-        holder. text_estado.setText(booksEntityList.get(position).getEstado());
-        holder.text_edicion.setText(booksEntityList.get(position).getEdicion());
+    public int getCount() {
+        return booksEntities.size();
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return booksEntities.get(position).getId();
     }
     @Override
-    public int getItemCount(){return booksEntityList.size();}
+    public BooksEntity getItem(int position) {
+        return booksEntities.get(position);
+    }
 
-    public static class ViewHolderBook extends RecyclerView.ViewHolder {
-        @BindView(R.id.text_title)
-         TextView text_title;
-        @BindView(R.id.text_isbn)
-         TextView text_isbn;
-        @BindView(R.id.text_estado)
-         TextView text_estado;
-        @BindView(R.id.text_edicion)
-         TextView text_edicion;
-        @BindView(R.id.image_portada)
-         ImageView image_portada;
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View view = inflater.inflate(R.layout.item_books, parent, false);
+        if (view!=null){
+            TextView titulo=(TextView)view.findViewById(R.id.text_title);
+            titulo.setText(booksEntities.get(position).getTitulo());
+            TextView isbn=(TextView)view.findViewById(R.id.text_isbn);
+            isbn.setText(booksEntities.get(position).getIsbn());
+            TextView estado=(TextView)view.findViewById(R.id.text_estado);
+            if(booksEntities.get(position).getEstado()==true){
+                estado.setText("Disponible");}
+            else{
+                estado.setText("No disponible");
+            }
+            TextView edicion=(TextView)view.findViewById(R.id.text_edicion);
+            edicion.setText(booksEntities.get(position).getEdicion());
 
-        public ViewHolderBook(View itemview){
-            super(itemview);
-            ButterKnife.bind(this,itemView);
         }
+        return view;
     }
-
 }
 

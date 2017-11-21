@@ -1,8 +1,6 @@
-package me.unmsm.alejandriapp.data.repositories.remote;
+package me.unmsm.alejandriapp.data.remote;
 
-
-
-import okhttp3.OkHttpClient;
+import  okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

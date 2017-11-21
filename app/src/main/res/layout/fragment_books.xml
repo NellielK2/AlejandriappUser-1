@@ -1,45 +1,50 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_books"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".presentacion.Fragments.BooksFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <me.unmsm.alejandriapp.presentacion.widget.MediumText
-        android:id="@+id/titleBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/book_title"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="20dp"/>
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
-    <LinearLayout
-        android:id="@+id/listBook"
+    android:layout_height="match_parent">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@+id/titleBook">
-        <TextView
+        android:background="@color/white"
+        tools:context=".presentacion.Fragments.BooksFragment">
+        <me.unmsm.alejandriapp.presentacion.widget.MediumText
+            android:id="@+id/titleBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book_title"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"/>
+        <!--    <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />-->
+        <LinearLayout
+            android:id="@+id/listBook"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:text="@string/no_books"
-            android:gravity="center"
-            android:visibility="gone"
-            android:textSize="@dimen/normal_text"
-            android:id="@+id/tv_no_items"/>
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_book"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/item_books"/>
-    </LinearLayout>
-</RelativeLayout>
+            android:orientation="vertical"
+            android:layout_below="@+id/titleBook">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="@string/no_books"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="@dimen/normal_text"
+                android:id="@+id/tv_no_items"/>
+            <ListView
+                android:id="@+id/list_book"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_books"/>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+

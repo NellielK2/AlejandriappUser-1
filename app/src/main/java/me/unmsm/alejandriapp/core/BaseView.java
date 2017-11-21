@@ -1,7 +1,5 @@
 package me.unmsm.alejandriapp.core;
 
-
-
 public interface BaseView<T> {
 
     void setLoadingIndicator(boolean active);

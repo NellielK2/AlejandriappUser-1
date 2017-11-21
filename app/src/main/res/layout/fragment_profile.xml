@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:id="@+id/relative_container"
     tools:context=".presentacion.Fragments.ProfileFragment">
 
     <me.unmsm.alejandriapp.presentacion.widget.MediumText
@@ -209,28 +210,19 @@
             android:layout_marginStart="10dp"
             />
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/linear_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
-        android:layout_below="@id/linear_eap"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp">
-        <ImageView
-            android:id="@+id/image_logout"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/image_logout"
-            />
-        <me.unmsm.alejandriapp.presentacion.widget.SemiBoldText
+
+        <Button
             android:id="@+id/text_logout"
             android:layout_width="300dp"
-            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
             android:text="Cerrar sesión"
             android:textSize="18sp"
-            android:layout_marginStart="10dp"
-            />
-    </LinearLayout>
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custom_button_logout"
+            android:layout_below="@+id/linear_eap"
+            android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

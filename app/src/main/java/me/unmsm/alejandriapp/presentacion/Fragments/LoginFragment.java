@@ -3,6 +3,7 @@ package me.unmsm.alejandriapp.presentacion.Fragments;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ import me.unmsm.alejandriapp.R;
 import me.unmsm.alejandriapp.core.BaseFragment;
 import me.unmsm.alejandriapp.presentacion.activity.LoginActivity;
 import me.unmsm.alejandriapp.presentacion.activity.MainActivity;
+
 import me.unmsm.alejandriapp.presentacion.contract.LoginContract;
 
 import static com.google.gson.internal.$Gson$Preconditions.checkNotNull;
@@ -57,6 +59,7 @@ public class LoginFragment extends BaseFragment implements LoginContract.View,Va
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.i("uwu", "uwu");
         View root = inflater.inflate(R.layout.fragment_login, container, false);
         ButterKnife.bind(this, root);
         return root;

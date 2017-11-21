@@ -1,8 +1,5 @@
 package me.unmsm.alejandriapp.data.entity;
 
-/**
- * Created by KERLY on 31/10/2017.
- */
 
 public class HistoryEntity {
     private String title;

@@ -9,12 +9,14 @@
     <me.unmsm.alejandriapp.presentacion.widget.MediumText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="46dp"
         android:layout_marginLeft="75dp"
         android:text="@string/app_name"
         android:textColor="@color/blanco"
         android:textSize="35sp"
-        android:id="@+id/mediumText" />
+        android:id="@+id/mediumText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <RelativeLayout
         android:id="@+id/layout_frame"
@@ -23,7 +25,7 @@
         android:layout_marginLeft="30dp"
         android:windowSoftInputMode="adjustResize|stateHidden"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:background="@color/blanco"
         android:elevation="4dp"
         android:orientation="vertical"

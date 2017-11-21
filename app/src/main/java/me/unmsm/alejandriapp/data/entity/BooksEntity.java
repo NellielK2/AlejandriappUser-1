@@ -2,14 +2,14 @@ package me.unmsm.alejandriapp.data.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by KERLY on 03/10/2017.
- */
+import java.io.Serializable;
 
 
-public class BooksEntity {
+public class BooksEntity implements Serializable {
     @SerializedName("titulo")
     public String titulo;
+    @SerializedName("autor")
+    public String autor;
     @SerializedName("edicion")
     public String edicion;
     @SerializedName("isbn")
@@ -29,16 +29,17 @@ public class BooksEntity {
     @SerializedName("fecha_imgreso")
     public String fecha_ingreso;
     @SerializedName("estado")
-    public String estado;
+    public Boolean estado;
     @SerializedName("id")
     public Integer id;
 
-
-    public BooksEntity() {
+    public BooksEntity(Boolean estado) {
+        this.estado = estado;
     }
 
-    public BooksEntity(String titulo, String edicion, String isbn, String idioma, String portadaPhoto, String codigoQR, Integer anio, Integer num_ingreso, Integer num_hoja, String fecha_ingreso, String estado, Integer id) {
+    public BooksEntity(String titulo, String autor, String edicion, String isbn, String idioma, String portadaPhoto, String codigoQR, Integer anio, Integer num_ingreso, Integer num_hoja, String fecha_ingreso, Boolean estado, Integer id) {
         this.titulo = titulo;
+        this.autor = autor;
         this.edicion = edicion;
         this.isbn = isbn;
         this.idioma = idioma;
@@ -58,6 +59,15 @@ public class BooksEntity {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     public String getEdicion() {
@@ -132,11 +142,11 @@ public class BooksEntity {
         this.fecha_ingreso = fecha_ingreso;
     }
 
-    public String getEstado() {
+    public Boolean getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 

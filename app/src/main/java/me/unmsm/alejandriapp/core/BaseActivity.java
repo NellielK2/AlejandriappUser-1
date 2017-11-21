@@ -23,8 +23,6 @@ import butterknife.ButterKnife;
 import me.unmsm.alejandriapp.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-
-
 /**
  * Base Actividad de la cual se va a exteder las otras actividades de la app
  */
